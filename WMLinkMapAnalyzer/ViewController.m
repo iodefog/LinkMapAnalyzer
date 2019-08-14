@@ -40,6 +40,7 @@
     
     NSString *historyPath = [[NSUserDefaults standardUserDefaults] objectForKey:kLinkMapHistoryPath];
     NSString *historyUtil = [[NSUserDefaults standardUserDefaults] objectForKey:kLinkMapHistoryUtil];
+    [self.fileTF setEditable:YES];
     if (historyPath) {
         self.fileTF.stringValue = historyPath;
         self.ChooseLinkMapFileURL = [NSURL fileURLWithPath:historyPath];
