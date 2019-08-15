@@ -87,6 +87,7 @@
 
 - (IBAction)StartAnalyzer:(id)sender {
     
+    _ChooseLinkMapFileURL= [NSURL fileURLWithPath:self.fileTF.stringValue];
     if (!_ChooseLinkMapFileURL || ![[NSFileManager defaultManager] fileExistsAtPath:[_ChooseLinkMapFileURL path] isDirectory:nil])
     {
         NSAlert *alert = [[NSAlert alloc]init];
